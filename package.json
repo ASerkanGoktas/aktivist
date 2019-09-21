@@ -1,0 +1,25 @@
+{
+  "name": "aktivist",
+  "version": "1.0.0",
+  "description": "a web app to ease finding activities, events etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ./app/dist/ -a localhost -p 8080 -c-1",
+    "build": "webpack --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "webpack": "^4.40.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
+    "webpack-cli": "^3.3.9"
+  }
+}
