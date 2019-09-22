@@ -5,8 +5,10 @@ var app = express();
 var http = require('http');
 var server = http.Server(app);
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + "/app/dist"));
 
 server.listen(PORT, () => {
+    console.log("hey")
+    console.log(__dirname);
     console.log("listening...");
 });
