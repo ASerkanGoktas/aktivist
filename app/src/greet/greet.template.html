@@ -38,7 +38,7 @@
 
 <div class = "container-fluid">
   <div class = "row">
-    <div class = "col">
+    <div class = "col-7">
       <div class = "row">
         <div class = "col-4" ng-repeat = "act in $ctrl.acts">
             <div class = "card m-3" ng-click = "$ctrl.broaden(act)">
@@ -54,7 +54,7 @@
 
     </div>
     <div class = "col">
-        <div class = "card m-3" style = "position: fixed; width : 40%">
+        <div class = "card m-3" style = "position: fixed; width : 30%; right: 5rem">
             <img ng-src = "{{$ctrl.selact.img}}" />
             <div class = "card-body">
               <h5 class = "card-title">{{$ctrl.selact.isim}}</h5>
