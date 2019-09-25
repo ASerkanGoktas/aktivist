@@ -3,7 +3,7 @@ import tpl from './greet.template.html'
 class GreetController{
 
 
-    constructor(){
+    constructor($mdMedia){
         this.greeting = "Hello my dear folks!";
         this.acts = [];
 
@@ -27,10 +27,16 @@ class GreetController{
 
         this.broaden = act => {
             this.selact = act;
-        }
+        };
+
+        this.isLarge = () => {
+            return $mdMedia('lg');
+        };
     }
 
 }
+
+GreetController.inject = ["mdMedia"];
 
 export default {
     template : tpl,
