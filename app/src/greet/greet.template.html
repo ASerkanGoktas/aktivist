@@ -1,3 +1,5 @@
+<!-- navbar-->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,18 +36,29 @@
     </div>
   </nav>
 
+<!--navbar end-->
 
+<!-- popup for non desktop devices-->
   <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" ng-if = "!$ctrl.isLarge()">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">{{$ctrl.selact.isim}}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            ...
+              <div class = "card m-3">
+                  <img ng-src = "{{$ctrl.selact.img}}" />
+                  <div class = "card-body">
+                    <h5 class = "card-title">{{$ctrl.selact.isim}}</h5>
+                    <p class = "card-text">{{$ctrl.selact.aciklama}}</p>
+                    <p class = "card-text text-right">{{$ctrl.selact.tarih}}</p>
+                    <p class = "card-text">Ayrıntı: </p>
+                    <p class = "card-text text-left">{{$ctrl.selact.ayrinti}}</p>
+                  </div>
+                </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -57,6 +70,8 @@
 
 <div class = "container-fluid">
   <div class = "row">
+
+    <!-- Grid of acts-->
     <div class = "col-xl-7">
       <div class = "row">
         <div class = "col-md-4 col-sm-6" ng-repeat = "act in $ctrl.acts">
@@ -72,6 +87,8 @@
       </div>
 
     </div>
+
+<!-- showing selected act-->
     <div class = "col-5 d-none d-xl-block">
         <div class = "card m-3" style = "position: fixed; width : 30%; right: 5rem">
             <img ng-src = "{{$ctrl.selact.img}}" />
