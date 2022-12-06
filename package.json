@@ -17,8 +17,8 @@
     "angular-aria": "^1.7.8",
     "angular-material": "^1.1.20",
     "bootstrap": "^4.3.1",
-    "express": "^4.17.1",
-    "http-server": "^0.11.1",
+    "express": "^4.18.2",
+    "http-server": "^0.11.2",
     "jquery": "^3.4.1",
     "mini-css-extract-plugin": "^0.8.0",
     "popper.js": "^1.15.0"
